@@ -31,4 +31,12 @@ GOOGLE_PROJECT_ID=<your-google-project-id>
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
+4. Visit `http://localhost:8000/docs` to view OpenAPI and test endpoints.
 
+## Deploy
+- Build the Docker image and deploy to Fly/Render/Vercel as you prefer.
+- Be sure to set env vars in the deployment environment.
+
+## Cequence / MCP
+- Upload `http://<your-host>/openapi.json` to Cequence when creating the MCP server.
+- Map scopes `docs.read`, `docs.content`, `docs.summarize` to endpoints.
